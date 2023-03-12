@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+main::after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5046393557422969) 49%, rgba(0,0,0,1) 100%);
+    z-index: -1;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.informacao .logo {
+    max-width: 21.873em;
+    filter: invert(1);
+    margin-bottom: 5em;
+}
+
+.informacao .logo:hover {
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+.informacao .discricao {
+    width: 49%;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1.875em;
+}
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;  
+}
+
+.botoes-carrossel .botao {
+    background-color: #fff;
+    width: 0.9375em;
+    height: 0.9375em;
+    border-radius: 50%;
+    border: 0.125em solid transparent;
+    cursor: pointer;
+    border-color: #fff;
+}
+
+.botoes-carrossel .botao:hover {
+    transform: scale(1.2);
+    transition: 0.4s ease-in-out;
+}
+
+.botoes-carrossel .botao.selecionado {
+    background-color: #1d8346;
+
+}
+
+.menu-lateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5em;
+    min-height: 100vh;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375em;
+}
+
+.menu-lateral .icone {
+    width: 1.875em;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.menu-lateral .icone:hover {
+    transform: scale(1.2);
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrossel .imagem {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem  0.7s;
+}
+
+.carrossel .imagem.ativa {
+    display: block;
+}
+
+@keyframes mudarImagem {
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
